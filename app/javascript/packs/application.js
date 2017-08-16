@@ -10,3 +10,7 @@
 console.log('Hello World from Webpacker')
 
 import '../styles'
+
+var Turbolinks = require("turbolinks")
+Turbolinks.start()
+
