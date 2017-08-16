@@ -10,6 +10,5 @@
 console.log('Hello World from Webpacker')
 
 import '../styles'
-import RailsUjs from "rails-ujs"
-import Turbolinks from "turbolinks"
+import Turbolinks from 'turbolinks'
 Turbolinks.start()
