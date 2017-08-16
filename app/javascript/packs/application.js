@@ -9,6 +9,6 @@
 
 console.log('Hello World from Webpacker')
 
-import '../styles'
+import '../globals/styles'
 import Turbolinks from 'turbolinks'
 Turbolinks.start()
