@@ -6,9 +6,11 @@
 
 import Vue from 'vue'
 import App from './App.vue'
+import Vuex from 'vuex'
 import TurbolinksAdapter from 'vue-turbolinks'
 
 Vue.use(TurbolinksAdapter)
+Vue.use(Vuex)
 
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue(App).$mount('hello-vue')
