@@ -6,10 +6,10 @@
 
 import Vue from 'vue'
 import App from './App.vue'
+import TurbolinksAdapter from 'vue-turbolinks'
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.appendChild(document.createElement('hello'))
-  const app = new Vue(App).$mount('hello')
+Vue.use(TurbolinksAdapter)
 
-  console.log(app)
+document.addEventListener('turbolinks:load', () => {
+  const app = new Vue(App).$mount('hello-vue')
 })

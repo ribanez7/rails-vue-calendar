@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsVueCalendar</title>
+    <title>Rails Vue Calendar</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'vendor', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'manifest', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'vendor', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'favicon-32x32.png', type: 'image/png', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+<%# stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%# javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
