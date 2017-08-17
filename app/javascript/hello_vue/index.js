@@ -5,13 +5,29 @@
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
 import Vue from 'vue'
-import App from './App.vue'
-import Vuex from 'vuex'
+import store from './store'
+import moment from 'moment-timezone'
+moment.tz.setDefault('UTC')
+Object.defineProperty(Vue.prototype, '$moment', { get() { return this.$root.moment } })
+// import Vuex from 'vuex'
 import TurbolinksAdapter from 'vue-turbolinks'
 
+import App from './App.vue'
+
 Vue.use(TurbolinksAdapter)
-Vue.use(Vuex)
+// Vue.use(Vuex)
 
 document.addEventListener('turbolinks:load', () => {
-  const app = new Vue(App).$mount('hello-vue')
+  // const app = new Vue(App).$mount('hello-vue')
+  const app = new Vue({
+    el: 'hello-vue',
+    render: h => h(App),
+    data: {
+      moment
+    },
+    // store,
+    components: {
+      App
+    }
+  })
 })
