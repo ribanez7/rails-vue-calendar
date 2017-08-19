@@ -2,4 +2,4 @@
   h1 HelloVue#index
   p Find me in app/views/hello_vue/index.html.slim
 
-  hello-vue
+  = tag.hello_vue data: { i18n: { hello: 'Hola', bye: 'Adiós' } }.to_json
